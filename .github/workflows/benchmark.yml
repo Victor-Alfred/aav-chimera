@@ -1,0 +1,59 @@
+name: Benchmark
+
+# Republishes the benchmark figures and a metrics summary from the committed
+# ground-truth results (results/benchmark_results.json). This keeps the numbers
+# and plots in the README verifiably in sync with the data on every push.
+#
+# The FULL end-to-end benchmark (simulate -> qc -> benchmark) requires multi-GB
+# reference genomes (e.g. hg38) and external aligners, so it is run locally via
+# examples/run_benchmark.sh rather than in CI. See docs/benchmarks.md.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "results/**"
+      - "scripts/make_figures.py"
+      - ".github/workflows/benchmark.yml"
+  workflow_dispatch:
+
+jobs:
+  publish-metrics:
+    name: Regenerate figures & publish metrics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install matplotlib
+        run: pip install matplotlib
+
+      - name: Regenerate figures from results
+        run: python scripts/make_figures.py
+
+      - name: Write metrics to job summary
+        run: |
+          python - << 'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          with open("results/benchmark_results.json") as fh:
+              r = json.load(fh)
+          cd = r["chimeric_detection"]
+          print("## Chimeric-detection benchmark\n")
+          print("| Metric | Value |")
+          print("| --- | --- |")
+          for k in ["precision", "recall", "specificity", "f1_score", "accuracy"]:
+              print(f"| {k.replace('_', ' ').title()} | {cd[k]:.4f} |")
+          print(f"| True positives | {cd['true_positives']} |")
+          print(f"| False positives | {cd['false_positives']} |")
+          print(f"| False negatives | {cd['false_negatives']} |")
+          PY
+
+      - name: Upload figures as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-figures
+          path: results/figures/*.png

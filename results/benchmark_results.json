@@ -1,0 +1,58 @@
+{
+  "chimeric_detection": {
+    "true_positives": 480,
+    "false_positives": 0,
+    "false_negatives": 27,
+    "true_negatives": 4564,
+    "sensitivity": 0.9467,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "recall": 0.9467,
+    "f1_score": 0.9726,
+    "accuracy": 0.9947
+  },
+  "host_detection": {
+    "true_positives": 476,
+    "false_positives": 0,
+    "false_negatives": 27
+  },
+  "backbone_detection": {
+    "true_positives": 242,
+    "false_positives": 0,
+    "false_negatives": 11,
+    "sensitivity": 0.9565,
+    "precision": 1.0
+  },
+  "reference_pair_metrics": {
+    "correct": 399,
+    "total": 480,
+    "accuracy": 0.8313
+  },
+  "error_analysis": {
+    "num_false_positives": 0,
+    "num_false_negatives": 27,
+    "fp_examples": [],
+    "fn_examples": [
+      "read_000413",
+      "read_000106",
+      "read_000037",
+      "read_000018",
+      "read_000168",
+      "read_000382",
+      "read_000313",
+      "read_000082",
+      "read_000447",
+      "read_000497",
+      "read_000034",
+      "read_000376",
+      "read_000133",
+      "read_000301",
+      "read_000418",
+      "read_000117",
+      "read_000242",
+      "read_000150",
+      "read_000157",
+      "read_000053"
+    ]
+  }
+}

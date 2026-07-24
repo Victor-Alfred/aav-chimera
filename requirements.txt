@@ -1,0 +1,8 @@
+# Runtime dependencies for the AAV-QC toolkit.
+# External command-line tools (minimap2, samtools, porechop, NanoFilt, NanoPlot)
+# are installed separately — see README "Installation".
+pysam>=0.22
+biopython>=1.81
+
+# Optional: only needed to regenerate benchmark figures.
+matplotlib>=3.7

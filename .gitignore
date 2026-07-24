@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Test / lint caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Bioinformatics working data — never commit large sequencing artifacts
+*.bam
+*.bam.bai
+*.sam
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.fasta
+*.fa
+*.fai
+!examples/**/*.fasta
+work_dir/
+pipeline_output*/
+simulated_reads*/
+*.log
+!results/benchmark.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

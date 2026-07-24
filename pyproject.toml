@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aav-chimera"
+version = "1.0.0"
+description = "Benchmark-validated chimeric read detection for AAV vectors on Oxford Nanopore."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Victor Alfred", email = "vicalf_1@yahoo.com" }]
+keywords = ["bioinformatics", "AAV", "gene-therapy", "nanopore", "quality-control", "chimeric-reads"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Operating System :: POSIX :: Linux",
+]
+
+dependencies = [
+    "pysam>=0.22",
+    "biopython>=1.81",
+]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.7"]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.4",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+aav-chimera = "aav_chimera.qc:main"
+aav-chimera-sim = "aav_chimera.simulator:main"
+
+[project.urls]
+Homepage = "https://github.com/Victor-Alfred/aav-chimera"
+Issues = "https://github.com/Victor-Alfred/aav-chimera/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+# Pragmatic set: real bugs and obvious style, not nitpicks.
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]  # line length handled by formatter; long CLI help strings are fine
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,62 @@
+2026-06-04 15:14:30,136 | INFO | Loading pipeline chimeric output: pipeline_output_chimeric/samples/simulated_reads_1/analysis/chimeric_reads/simulated_reads_1_host_chimeric_reads.csv
+2026-06-04 15:14:30,138 | INFO | Loading pipeline chimeric output: pipeline_output_chimeric/samples/simulated_reads_1/analysis/chimeric_reads/simulated_reads_1_chimeric_reads.csv
+2026-06-04 15:14:30,140 | INFO | Loading pipeline classifications: pipeline_output_chimeric/samples/simulated_reads_1/analysis/simulated_reads_1_genome_classifications.csv
+2026-06-04 15:14:30,148 | INFO | Benchmarking: 5912 ground truth reads, 557 pipeline chimeric detections, 5895 pipeline classifications
+2026-06-04 15:14:30,167 | INFO | ============================================================
+2026-06-04 15:14:30,167 | INFO | BENCHMARK RESULTS
+2026-06-04 15:14:30,167 | INFO | ============================================================
+2026-06-04 15:14:30,167 | INFO | CHIMERIC DETECTION:
+2026-06-04 15:14:30,167 | INFO |   True Positives:  557
+2026-06-04 15:14:30,167 | INFO |   False Positives: 0
+2026-06-04 15:14:30,167 | INFO |   False Negatives: 34
+2026-06-04 15:14:30,167 | INFO |   True Negatives:  5321
+2026-06-04 15:14:30,167 | INFO |   Sensitivity:     0.9425
+2026-06-04 15:14:30,167 | INFO |   Specificity:     1.0000
+2026-06-04 15:14:30,167 | INFO |   Precision:       1.0000
+2026-06-04 15:14:30,167 | INFO |   F1 Score:        0.9704
+2026-06-04 15:14:30,167 | INFO |   Accuracy:        0.9942
+2026-06-04 15:14:30,167 | INFO |   Ref Pair Acc:    0.8169
+2026-06-04 15:14:30,167 | INFO | 
+2026-06-04 15:14:30,167 | INFO | BACKBONE DETECTION:
+2026-06-04 15:14:30,167 | INFO |   True Positives:  279
+2026-06-04 15:14:30,167 | INFO |   False Positives: 0
+2026-06-04 15:14:30,167 | INFO |   False Negatives: 16
+2026-06-04 15:14:30,167 | INFO |   Sensitivity:     0.9458
+2026-06-04 15:14:30,167 | INFO |   Precision:       1.0000
+2026-06-04 15:14:30,167 | INFO | 
+2026-06-04 15:14:30,167 | INFO | HOST CHIMERIC DETECTION:
+2026-06-04 15:14:30,167 | INFO |   True Positives:  555
+2026-06-04 15:14:30,168 | INFO |   False Positives: 0
+2026-06-04 15:14:30,168 | INFO |   False Negatives: 34
+2026-06-04 15:14:30,168 | INFO | ============================================================
+2026-06-04 15:15:14,523 | INFO | Loading pipeline chimeric output: pipeline_output_chimeric/samples/simulated_reads_2/analysis/chimeric_reads/simulated_reads_2_host_chimeric_reads.csv
+2026-06-04 15:15:14,524 | INFO | Loading pipeline chimeric output: pipeline_output_chimeric/samples/simulated_reads_2/analysis/chimeric_reads/simulated_reads_2_chimeric_reads.csv
+2026-06-04 15:15:14,526 | INFO | Loading pipeline classifications: pipeline_output_chimeric/samples/simulated_reads_2/analysis/simulated_reads_2_genome_classifications.csv
+2026-06-04 15:15:14,531 | INFO | Benchmarking: 5071 ground truth reads, 480 pipeline chimeric detections, 5058 pipeline classifications
+2026-06-04 15:15:14,551 | INFO | ============================================================
+2026-06-04 15:15:14,551 | INFO | BENCHMARK RESULTS
+2026-06-04 15:15:14,551 | INFO | ============================================================
+2026-06-04 15:15:14,551 | INFO | CHIMERIC DETECTION:
+2026-06-04 15:15:14,551 | INFO |   True Positives:  480
+2026-06-04 15:15:14,551 | INFO |   False Positives: 0
+2026-06-04 15:15:14,551 | INFO |   False Negatives: 27
+2026-06-04 15:15:14,551 | INFO |   True Negatives:  4564
+2026-06-04 15:15:14,551 | INFO |   Sensitivity:     0.9467
+2026-06-04 15:15:14,551 | INFO |   Specificity:     1.0000
+2026-06-04 15:15:14,551 | INFO |   Precision:       1.0000
+2026-06-04 15:15:14,551 | INFO |   F1 Score:        0.9726
+2026-06-04 15:15:14,551 | INFO |   Accuracy:        0.9947
+2026-06-04 15:15:14,551 | INFO |   Ref Pair Acc:    0.8313
+2026-06-04 15:15:14,551 | INFO | 
+2026-06-04 15:15:14,551 | INFO | BACKBONE DETECTION:
+2026-06-04 15:15:14,551 | INFO |   True Positives:  242
+2026-06-04 15:15:14,551 | INFO |   False Positives: 0
+2026-06-04 15:15:14,551 | INFO |   False Negatives: 11
+2026-06-04 15:15:14,551 | INFO |   Sensitivity:     0.9565
+2026-06-04 15:15:14,551 | INFO |   Precision:       1.0000
+2026-06-04 15:15:14,551 | INFO | 
+2026-06-04 15:15:14,551 | INFO | HOST CHIMERIC DETECTION:
+2026-06-04 15:15:14,551 | INFO |   True Positives:  476
+2026-06-04 15:15:14,551 | INFO |   False Positives: 0
+2026-06-04 15:15:14,551 | INFO |   False Negatives: 27
+2026-06-04 15:15:14,551 | INFO | ============================================================
